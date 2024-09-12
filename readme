@@ -1,0 +1,87 @@
+COFFE SHOP DOMAIN MODEL:
+Welcome to the Coffee Shop Domain Model project! This Python application models a coffee shop with classes for Customer, Coffee, and Order. This document provides all the necessary information to set up, use, and test the application.
+
+PROJECT STRUCTURE:
+coffee_shop/
+│
+├── customer.py
+├── coffee.py
+├── order.py
+├── debug.py
+├── README.md
+└── tests/
+    ├── test_customer.py
+    ├── test_coffee.py
+    └── test_order.py
+
+customer.py: Contains the Customer class.
+coffee.py: Contains the Coffee class.
+order.py: Contains the Order class.
+debug.py: Script for interactive testing and debugging.
+README.md: This file.
+tests/: Directory containing unit tests for each class.
+
+SETUP:
+1. CLONE THE REPOSITORY:
+git clone <repo_url>
+mkdir coffee_shop
+cd coffee_shop
+
+2. SETUP UP THE VIRTUAL ENVIRONMENT:
+pipenv install
+pipenv shell
+pipenv install pytest
+use pytest -s tests/test then the file if you want to see what is printed
+Attributes:
+
+name: The name of the customer (string, 1-15 characters).
+Methods:
+
+orders(): Returns a list of all orders placed by the customer.
+coffees(): Returns a list of unique coffee instances that the customer has ordered.
+create_order(coffee, price): Creates a new order for the customer with the specified coffee and price.
+most_aficionado(coffee): Returns the customer who has spent the most money on the specified coffee.
+Coffee
+Represents a type of coffee available for order.
+
+
+NAME: The name of the coffee (string, at least 3 characters long).
+
+METHODS:
+orders(): Returns a list of all orders for this coffee.
+customers(): Returns a list of unique customers who have ordered this coffee.
+num_orders(): Returns the total number of orders for this coffee.
+average_price(): Returns the average price of this coffee based on its orders.
+Order
+Represents an order placed by a customer for a coffee.
+
+ATTRIBUTES:
+customer: The customer who placed the order.
+coffee: The coffee ordered.
+price: The price of the order (float, between 1.0 and 10.0).
+
+TESTING:
+Unit tests are provided to ensure the functionality of the classes and methods.
+
+RUN TESTS:
+pytest
+
+DEBUGGING:
+For interactive testing and debugging, use debug.py. This script allows you to create instances of the classes and test methods interactively.
+
+FILE DESCRIPTIONS:
+customer.py: Implements the Customer class.
+coffee.py: Implements the Coffee class.
+order.py: Implements the Order class.
+debug.py: For manual testing and debugging.
+tests/test_customer.py: Contains tests for the Customer class.
+tests/test_coffee.py: Contains tests for the Coffee class.
+tests/test_order.py: Contains tests for the Order class.
+
+
+
+
+
+
+
+
